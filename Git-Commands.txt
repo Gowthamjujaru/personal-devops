@@ -1,0 +1,18 @@
+Git status
+git add <filename> / git add .
+git status
+git commit -m "example file.txt"
+
+
+
+create repro in git copy push created repo 
+past it next check
+git remote -v
+
+git remote set-url origin a link will be displayed 
+create access tocken fron developers page setting in git copy it
+https://   acess token url  copy from github.com to .git
+
+next git remote -v the url will be change to tocken url
+next check git status then look origin it is main or master if master 
+git push origin master 

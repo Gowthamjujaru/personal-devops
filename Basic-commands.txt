@@ -1,0 +1,31 @@
+Basic commands
+
+Task 1
+present workind dir
+pwd 
+
+list file 
+ls -la
+to know which user
+whoami
+
+It shows information about your system and kernel.
+uname -a
+
+Task 2 – Directory Structure
+mkdir devops
+cd devops
+mkdir project1 project2
+touch file1.txt file2.txt
+
+Task 3 – File Operations
+cp file1.txt file3.txt
+mv file2.txt renamed.txt
+rm renamed.txt
+
+Task 4 – Viewing Files
+
+cat /etc/passwd
+less /etc/passwd
+head -5 /etc/passwd
+tail -5 /etc/passwd

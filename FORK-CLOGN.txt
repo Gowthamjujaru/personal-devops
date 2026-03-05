@@ -1,0 +1,95 @@
+Fork vs Clone — quick trainer’s guide (easy + memorable stories)
+
+Short TL;DR
+
+Fork = copy the project in the cloud (your GitHub/GitLab account).
+
+Clone = copy the project to your computer.
+
+Key differences (simple list)
+
+Where it happens
+
+Fork: on the hosting service (GitHub/GitLab) — a new repo under your account.
+
+Clone: on your local machine — git clone <url> creates a working copy in a folder.
+
+Why you use it
+
+Fork: when you want your own remote copy (usually because you don’t have write access to the original). Good for open-source contributions.
+
+Clone: when you need files locally to edit, run, test, or build.
+
+Relationship to the original
+
+Fork: becomes an independent remote repository; you can link it to the original with an upstream remote if you want to sync.
+
+Clone: keeps a remote called origin (the URL you cloned from). You can add more remotes (e.g., upstream) later.
+
+Permissions & contribution flow
+
+Fork: lets you push freely to your fork without affecting the original repo. To contribute back you open a Pull Request/Merge Request.
+
+Clone: you can push to whatever remote your local repo is configured to — if you cloned the original and you have write access, you can push directly; otherwise you push to your fork.
+
+Typical commands
+
+Fork: click Fork on the web UI (no git command).
+
+Clone: git clone git@github.com:yourname/repo.git
+
+Add upstream: git remote add upstream git@github.com:original/that-repo.git
+
+Sync from upstream: git fetch upstream → git merge upstream/main (or rebase).
+
+Two short stories to remember
+
+Story 1 — The Bakery
+
+There’s a famous bakery (original repo).
+
+If you fork, you open your own branch of that bakery in your neighborhood — same recipes, but under your name (your remote repo). You can change menu freely and customers visiting your bakery see your changes.
+
+If you clone, you borrow the recipe book and take it home to cook in your kitchen (your laptop). You can test recipes locally. To show the bakery owner your new pastry, you either bring it back to the original bakery (push if you have permission) or open a note (Pull Request) from your fork.
+
+Story 2 — The Library Photocopy
+
+The library has a book (original repo).
+
+Fork = you photocopy the book and file that copy in your locker at the library (a remote copy under your account).
+
+Clone = you take the book home to read and write notes (local copy).
+
+If you want the library to include your edits, you either give your edited photocopy to the librarian (push to original, if allowed) or show them your locker copy and ask them to accept changes (PR).
+
+Quick workflows (one-liners)
+
+Open-source contribution:
+
+Fork on GitHub →
+
+git clone git@github.com:you/repo.git →
+
+create a branch, make changes, git push origin your-branch →
+
+open a Pull Request back to original.
+
+Working inside a company repo (you have write access):
+
+git clone git@github.com:org/repo.git → branch → commit → git push origin branch → open PR internally.
+
+Keeping a fork up-to-date:
+
+git remote add upstream git@github.com:original/repo.git
+
+git fetch upstream
+
+git merge upstream/main (or git rebase upstream/main)
+
+One-line memory aids
+
+Fork = cloud copy (your account).
+
+Clone = local copy (your machine).
+
+Mnemonic: Fork to own it online; Clone to work on it offline.

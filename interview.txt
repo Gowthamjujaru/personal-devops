@@ -1,0 +1,113 @@
+Fresher Level Questions
+
+Q1: What is Linux?
+Linux is an open-source Unix-like operating system based on the Linux kernel.
+
+Q2: What is the difference between Linux and Unix?
+Unix is proprietary. Linux is open-source and community-driven.
+
+Q3: What is root user?
+Superuser with full system access (UID 0).
+
+Q4: How do you check current directory?
+pwd
+
+🟡 2-Year Experience Questions
+
+Q1: Explain Linux boot process.
+BIOS → Bootloader (GRUB) → Kernel → init/systemd → Services
+
+Q2: Difference between /bin and /usr/bin?
+
+/bin → Essential binaries
+
+/usr/bin → User-installed binaries
+
+Q3: What happens when you type a command?
+
+Shell checks PATH
+
+Finds binary
+
+Creates process
+
+Kernel executes
+
+Q4: What is inode?
+Data structure storing metadata of file (not filename).
+
+Check inode:
+
+ls -i
+🔴 Scenario-Based
+
+Scenario 1:
+Application not starting. Where will you check logs?
+
+Answer:
+
+/var/log
+journalctl -xe
+systemctl status service_name
+
+Scenario 2:
+Disk full. How to check?
+
+df -h
+du -sh *
+🛠 TROUBLESHOOTING SECTION
+Issue 1: Permission Denied
+
+Identify:
+
+ls -l
+
+Fix:
+
+chmod
+chown
+Issue 2: Command not found
+
+Check:
+
+echo $PATH
+which command_name
+Issue 3: File deleted accidentally
+
+If open by process:
+Check:
+
+lsof | grep deleted
+💻 HANDS-ON MINI PROJECT (MANDATORY)
+🎯 Build a Simple Linux Environment
+
+Create structure:
+
+/home/youruser/company
+   ├── dev
+   ├── test
+   ├── prod
+
+Inside each:
+
+Create 3 files
+
+Add dummy content
+
+Copy dev → test
+
+Delete one file in prod
+
+Now:
+
+Count total files
+
+Check disk usage
+
+Find all .txt files
+
+Commands you must use:
+
+find
+wc -l
+du -sh

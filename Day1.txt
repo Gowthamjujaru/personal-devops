@@ -1,0 +1,10 @@
+to check git version
+ git --version
+ 
+to check which git user 
+ git config user.name
+
+to change user 
+git config --global user.name "Your New Name"
+git config --global user.email "your.new.email@example.com"
+
